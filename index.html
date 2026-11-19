@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Orman İmparatorluğu - Mobil Arcade Idle</title>
+<style>
+  * { box-sizing: border-box; user-select: none; -webkit-user-select: none; touch-action: none; }
+  html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    overflow: hidden; background: #162618; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #fff;
+  }
+  canvas { display: block; width: 100%; height: 100%; }
+
+  /* Üst HUD */
+  #hud {
+    position: fixed; top: 12px; left: 12px; right: 12px;
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: flex-start;
+    pointer-events: none; z-index: 10;
+  }
+  .hud-group { display: flex; flex-wrap: wrap; gap: 8px; pointer-events: none; }
+  .pill {
+    pointer-events: auto;
+    background: rgba(18, 28, 20, 0.84);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 220, 120, 0.28);
+    border-radius: 14px;
+    padding: 8px 12px;
+    display: flex; align-items: center; gap: 7px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    font-weight: 700; font-size: 14px;
+  }
+  .pill .sub { font-size: 11px; opacity: 0.75; font-weight: 500; }
+  .btn-icon {
+    pointer-events: auto;
+    background: rgba(24, 38, 26, 0.9);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    color: #fff; border-radius: 12px; padding: 8px 11px;
+    font-size: 15px; font-weight: 700; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .btn-icon:active { transform: scale(0.95); }
+
+  /* Alt aksiyon / market butonu */
+  #bottom-bar {
+    position: fixed; bottom: 18px; right: 18px;
+    display: flex; flex-direction: column; gap
+    
